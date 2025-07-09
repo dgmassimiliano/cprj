@@ -23,4 +23,19 @@ document.addEventListener("DOMContentLoaded", function () {
     localStorage.setItem("cookies-accepted", "true");
     banner.style.display = "none";
   });
+
+  //Photo Gallery
+  const modal = new bootstrap.Modal(document.getElementById('imageModal'));
+    const modalImage = document.getElementById('modalImage');
+    const thumbs = document.querySelectorAll('.gallery-thumb');
+
+    thumbs.forEach(thumb => {
+      thumb.addEventListener('click', function (e) {
+        e.preventDefault();
+        const imgSrc = this.getAttribute('data-img');
+        modalImage.src = imgSrc;
+        modal.show();
+      });
+    });
+
 });
