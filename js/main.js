@@ -32,7 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
     thumbs.forEach(thumb => {
       thumb.addEventListener('click', function (e) {
         e.preventDefault();
-        const imgSrc = this.getAttribute('data-img');
+        const imgSrc = this.querySelector('img').getAttribute('src');
+        alert(imgSrc);
         modalImage.src = imgSrc;
         modal.show();
       });
