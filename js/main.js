@@ -32,13 +32,10 @@ document.addEventListener("DOMContentLoaded", function () {
     thumbs.forEach(thumb => {
       thumb.addEventListener('click', function (e) {
         e.preventDefault();
-<<<<<<< HEAD
+
         let imgSrc = this.querySelector('img').getAttribute('src');
         // Rimuove la "s" subito dopo lo slash e prima della "g"
         imgSrc = imgSrc.replace(/\/s(?=g)/, '/');
-=======
-        const imgSrc = this.querySelector('img').getAttribute('src');       
->>>>>>> 59ebb10fe7d638dd8f9f8482ed0a2688af8a1050
         modalImage.src = imgSrc;
         modal.show();
       });
